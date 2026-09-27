@@ -1,0 +1,8 @@
+Package: fundamental-analysis
+Version: 1.0.0
+Section: utils
+Priority: optional
+Architecture: all
+Maintainer: Sascha Friederichs <sascha_friederichs@web.de>
+Depends: python3, python3-pip, libgl1, libglib2.0-0
+Description: Fundamental analysis tool developed in Python3 uses PySide6 and yFinance.

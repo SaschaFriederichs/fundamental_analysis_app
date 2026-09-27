@@ -1,0 +1,27 @@
+# ==========================================
+# Eclipse & PyDev Specific Files
+# ==========================================
+# Contains workspace-specific settings and plugin data
+.settings/
+
+# Optional: Uncomment these if you do NOT want to share Eclipse project files with team members
+# .project
+# .pydevproject
+
+# ==========================================
+# Python Bytecode & Cache
+# ==========================================
+# Compiled Python files and cache directories
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ==========================================
+# Debian Package Build Artifacts
+# ==========================================
+# Temporary directory used during the 'dpkg-deb' build process
+build_deb/
+
+# The final generated Debian package files
+*.deb

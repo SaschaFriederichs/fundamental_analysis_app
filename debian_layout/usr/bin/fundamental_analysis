@@ -1,0 +1,6 @@
+#!/bin/bash
+# 1. Füge den Installationsordner zum Python-Suchpfad hinzu
+export PYTHONPATH="/usr/share/fundamental_analysis:$PYTHONPATH"
+
+# 2. Starte dein Python-Paket als Modul
+exec python3 /usr/share/fundamental_analysis/main_gui.py "$@"

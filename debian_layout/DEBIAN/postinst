@@ -1,0 +1,9 @@
+#!/bin/bash
+set -e
+
+echo "🌐 Rechner hat Internet: Installiere yfinance via pip..."
+# Installiert yfinance systemweit. --break-system-packages ist ab Debian 12 / Ubuntu 23.04 
+# zwingend erforderlich, damit pip außerhalb von venvs überhaupt arbeiten darf.
+python3 -m pip install --upgrade --break-system-packages yfinance PySide6
+
+exit 0

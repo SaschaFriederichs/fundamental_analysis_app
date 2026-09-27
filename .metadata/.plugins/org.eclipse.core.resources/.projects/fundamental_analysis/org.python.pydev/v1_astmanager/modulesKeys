@@ -512,6 +512,7 @@ curl_cffi.requests.session|/home/sascha/project/venv/lib/python3.12/site-package
 curl_cffi.requests.utils|/home/sascha/project/venv/lib/python3.12/site-packages/curl_cffi/requests/utils.py
 curl_cffi.requests.websockets|/home/sascha/project/venv/lib/python3.12/site-packages/curl_cffi/requests/websockets.py
 curl_cffi.utils|/home/sascha/project/venv/lib/python3.12/site-packages/curl_cffi/utils.py
+data_extraction|/home/sascha/fundamental_analysis_app/fundamental_analysis/src/data_extraction.py
 dateutil.__init__|/home/sascha/project/venv/lib/python3.12/site-packages/dateutil/__init__.py
 dateutil._common|/home/sascha/project/venv/lib/python3.12/site-packages/dateutil/_common.py
 dateutil._version|/home/sascha/project/venv/lib/python3.12/site-packages/dateutil/_version.py
@@ -601,6 +602,7 @@ idna.idnadata|/home/sascha/project/venv/lib/python3.12/site-packages/idna/idnada
 idna.intranges|/home/sascha/project/venv/lib/python3.12/site-packages/idna/intranges.py
 idna.package_data|/home/sascha/project/venv/lib/python3.12/site-packages/idna/package_data.py
 idna.uts46data|/home/sascha/project/venv/lib/python3.12/site-packages/idna/uts46data.py
+main_gui|/home/sascha/fundamental_analysis_app/fundamental_analysis/src/main_gui.py
 markdown_it.__init__|/home/sascha/project/venv/lib/python3.12/site-packages/markdown_it/__init__.py
 markdown_it._compat|/home/sascha/project/venv/lib/python3.12/site-packages/markdown_it/_compat.py
 markdown_it._punycode|/home/sascha/project/venv/lib/python3.12/site-packages/markdown_it/_punycode.py
@@ -2716,6 +2718,7 @@ pandas.util._tester|/home/sascha/project/venv/lib/python3.12/site-packages/panda
 pandas.util._validators|/home/sascha/project/venv/lib/python3.12/site-packages/pandas/util/_validators.py
 pandas.util.version.__init__|/home/sascha/project/venv/lib/python3.12/site-packages/pandas/util/version/__init__.py
 peewee|/home/sascha/project/venv/lib/python3.12/site-packages/peewee.py
+persistence|/home/sascha/fundamental_analysis_app/fundamental_analysis/src/persistence.py
 pip.__init__|/home/sascha/project/venv/lib/python3.12/site-packages/pip/__init__.py
 pip.__main__|/home/sascha/project/venv/lib/python3.12/site-packages/pip/__main__.py
 pip._internal.__init__|/home/sascha/project/venv/lib/python3.12/site-packages/pip/_internal/__init__.py
@@ -4023,17 +4026,6 @@ soupsieve.css_parser|/home/sascha/project/venv/lib/python3.12/site-packages/soup
 soupsieve.css_types|/home/sascha/project/venv/lib/python3.12/site-packages/soupsieve/css_types.py
 soupsieve.pretty|/home/sascha/project/venv/lib/python3.12/site-packages/soupsieve/pretty.py
 soupsieve.util|/home/sascha/project/venv/lib/python3.12/site-packages/soupsieve/util.py
-src.__init__|/home/sascha/fundamental_analysis_app/fundamental_analysis/src|^
-src.data_extraction|/home/sascha/fundamental_analysis_app/fundamental_analysis/src/data_extraction.py
-src.main_gui|/home/sascha/fundamental_analysis_app/fundamental_analysis/src/main_gui.py
-src.persistence|/home/sascha/fundamental_analysis_app/fundamental_analysis/src/persistence.py
-src.tab1_gui|/home/sascha/fundamental_analysis_app/fundamental_analysis/src/tab1_gui.py
-src.tab2_gui|/home/sascha/fundamental_analysis_app/fundamental_analysis/src/tab2_gui.py
-src.tab3_gui|/home/sascha/fundamental_analysis_app/fundamental_analysis/src/tab3_gui.py
-src.tab4_gui|/home/sascha/fundamental_analysis_app/fundamental_analysis/src/tab4_gui.py
-src.tab5_gui|/home/sascha/fundamental_analysis_app/fundamental_analysis/src/tab5_gui.py
-src.tab6_gui|/home/sascha/fundamental_analysis_app/fundamental_analysis/src/tab6_gui.py
-src.tab7_gui|/home/sascha/fundamental_analysis_app/fundamental_analysis/src/tab7_gui.py
 stdeb.__init__|/home/sascha/project/venv/lib/python3.12/site-packages/stdeb/__init__.py
 stdeb.cli_runner|/home/sascha/project/venv/lib/python3.12/site-packages/stdeb/cli_runner.py
 stdeb.command.__init__|/home/sascha/project/venv/lib/python3.12/site-packages/stdeb/command/__init__.py
@@ -4046,6 +4038,13 @@ stdeb.downloader|/home/sascha/project/venv/lib/python3.12/site-packages/stdeb/do
 stdeb.pypi_simple|/home/sascha/project/venv/lib/python3.12/site-packages/stdeb/pypi_simple.py
 stdeb.transport|/home/sascha/project/venv/lib/python3.12/site-packages/stdeb/transport.py
 stdeb.util|/home/sascha/project/venv/lib/python3.12/site-packages/stdeb/util.py
+tab1_gui|/home/sascha/fundamental_analysis_app/fundamental_analysis/src/tab1_gui.py
+tab2_gui|/home/sascha/fundamental_analysis_app/fundamental_analysis/src/tab2_gui.py
+tab3_gui|/home/sascha/fundamental_analysis_app/fundamental_analysis/src/tab3_gui.py
+tab4_gui|/home/sascha/fundamental_analysis_app/fundamental_analysis/src/tab4_gui.py
+tab5_gui|/home/sascha/fundamental_analysis_app/fundamental_analysis/src/tab5_gui.py
+tab6_gui|/home/sascha/fundamental_analysis_app/fundamental_analysis/src/tab6_gui.py
+tab7_gui|/home/sascha/fundamental_analysis_app/fundamental_analysis/src/tab7_gui.py
 typing_extensions|/home/sascha/project/venv/lib/python3.12/site-packages/typing_extensions.py
 urllib3.__init__|/home/sascha/project/venv/lib/python3.12/site-packages/urllib3/__init__.py
 urllib3._base_connection|/home/sascha/project/venv/lib/python3.12/site-packages/urllib3/_base_connection.py

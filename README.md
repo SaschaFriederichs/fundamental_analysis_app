@@ -1,0 +1,92 @@
+# Fundamental Analysis Application
+
+A robust, modular desktop application built with **Python**, **PySide6 (Qt for Python)**, and **yFinance** designed to perform automated fundamental financial analysis on global equities. The application utilizes Python's native **shelve** module for lightweight, high-performance file-based data persistence.
+
+This project demonstrates strong software engineering practices, clean architecture (`src/` layout), file-based state management, and DevOps readiness through an automated, native **Debian packaging (`.deb`)** pipeline.
+
+---
+
+## 🚀 Key Features
+
+* **Multi-Tab GUI:** Built with PySide6 to deliver a responsive, clean, and interactive user experience split into 7 dedicated financial analysis views.
+* **Automated Data Retrieval:** Integrates seamlessly with the `yFinance` API to fetch real-time and historical fundamental market data.
+* **Persistent Cache Management:** Utilizes Python's native `shelve` module to persistently store analyzed financial data into local database files, reducing redundant API calls and allowing offline data review.
+* **Production-Ready Packaging:** Includes a custom Bash build pipeline to compile, permission-check, and package the application into a native Linux Debian file (`.deb`).
+* **Clean Code Architecture:** Employs a structured directory layout to guarantee strict separation of concerns and clear modular imports.
+
+---
+
+## 🛠️ Tech Stack & Skills Demonstrated
+
+* **Language:** Python 3
+* **GUI Framework:** PySide6 (Qt6)
+* **Financial Data API:** yFinance
+* **Data Persistence:** Python `shelve` (object persistence)
+* **DevOps & Packaging:** Debian Packaging Utilities (`dpkg-deb`), Bash Scripting, POSIX File Permissions (`chmod`, `find`)
+* **IDE & Tooling:** Eclipse (PyDev), Git / GitHub
+
+---
+
+## 📁 Project Structure
+
+```text
+fundamental-analysis/
+├── build_deb.sh                  # Automated script to compile & build the .deb package
+├── .gitignore                    # Configured to exclude bytecode, IDE, local shelve files & builds
+│
+├── src/                          # Source root (Configured as Eclipse PyDev Source Folder)
+│   ├── main_gui.py           # Application entry point & main window
+│   ├── data_extraction.py    # Analytical data fetching engine
+│   ├── tab1_gui.py           # Analysis Tab 1 (Individual calculation engine)
+│   └── ...                   
+│   └── tab7_gui.py           # Analysis Tab 7 (Individual calculation engine)
+│
+└── debian_layout/                # Mirror template of the target Linux filesystem
+    ├── DEBIAN/
+    │   ├── control               # Package metadata (dependencies, versioning)
+    │   └── postinst              # Post-installation script for dynamic dependencies
+    └── usr/
+        └── bin/
+            └── fundamental-analysis # Executable global terminal wrapper script
+```
+
+---
+
+## 📦 Building & Installing the Debian Package
+
+The project is designed to be fully automated for Linux distribution. 
+
+### 1. Build the `.deb` file locally
+Run the customized build script to compile the asset structure, enforce strict Debian file permissions, and generate the package:
+```bash
+chmod +x build_deb.sh
+./build_deb.sh
+```
+
+### 2. Install via native Package Manager
+Install the generated file on any Debian-based system (Debian, Ubuntu, Mint). The package automatically resolves prerequisites and safely downloads runtime requirements via an integrated post-installation routine:
+```bash
+sudo apt-get install ./fundamental-analysis_1.0.0_all.deb
+```
+
+### 3. Run the App
+Once installed, the application is registered globally in the system path and can be launched directly from any terminal window:
+```bash
+fundamental-analysis
+```
+
+---
+
+## ☁️ Cloud & AWS Architecture Alignment (Solutions Architect Perspective)
+
+While currently running as a high-performance desktop application, the system architecture is decoupled and built with cloud migration in mind:
+
+* **Decoupled Architecture:** The separation of the frontend UI (`PySide6`) from the analytical data crunching means the data engine can easily be migrated to **AWS Lambda** (Serverless) or containerized via **Docker** to run on **AWS ECS / Fargate**.
+* **State & Persistence Layer Evolution:** The current local file-based persistence handled by `shelve` represents a key-value store architecture. In a cloud-native iteration, this layer maps directly to **Amazon DynamoDB** or **Amazon ElastiCache (Redis)** to handle global user session state and optimized cross-user caching.
+* **CI/CD Deployment:** The current automated `build_deb.sh` can be effortlessly dropped into a **GitHub Actions** workflow to automatically compile and store new `.deb` release builds directly inside an **AWS S3 Bucket**.
+
+---
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).

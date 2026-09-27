@@ -35,11 +35,11 @@ fundamental-analysis/
 ├── .gitignore                    # Configured to exclude bytecode, IDE, local shelve files & builds
 │
 ├── src/                          # Source root (Configured as Eclipse PyDev Source Folder)
-│   ├── main_gui.py           # Application entry point & main window
-│   ├── data_extraction.py    # Analytical data fetching engine
-│   ├── tab1_gui.py           # Analysis Tab 1 (Individual calculation engine)
+│   ├── main_gui.py               # Application entry point & main window
+│   ├── data_extraction.py        # Analytical data fetching engine
+│   ├── tab1_gui.py               # Analysis Tab 1 (Individual calculation engine)
 │   └── ...                   
-│   └── tab7_gui.py           # Analysis Tab 7 (Individual calculation engine)
+│   └── tab7_gui.py               # Analysis Tab 7 (Individual calculation engine)
 │
 └── debian_layout/                # Mirror template of the target Linux filesystem
     ├── DEBIAN/
@@ -74,16 +74,6 @@ Once installed, the application is registered globally in the system path and ca
 ```bash
 fundamental-analysis
 ```
-
----
-
-## ☁️ Cloud & AWS Architecture Alignment (Solutions Architect Perspective)
-
-While currently running as a high-performance desktop application, the system architecture is decoupled and built with cloud migration in mind:
-
-* **Decoupled Architecture:** The separation of the frontend UI (`PySide6`) from the analytical data crunching means the data engine can easily be migrated to **AWS Lambda** (Serverless) or containerized via **Docker** to run on **AWS ECS / Fargate**.
-* **State & Persistence Layer Evolution:** The current local file-based persistence handled by `shelve` represents a key-value store architecture. In a cloud-native iteration, this layer maps directly to **Amazon DynamoDB** or **Amazon ElastiCache (Redis)** to handle global user session state and optimized cross-user caching.
-* **CI/CD Deployment:** The current automated `build_deb.sh` can be effortlessly dropped into a **GitHub Actions** workflow to automatically compile and store new `.deb` release builds directly inside an **AWS S3 Bucket**.
 
 ---
 
